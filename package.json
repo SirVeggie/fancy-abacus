@@ -1,0 +1,21 @@
+{
+  "name": "fancy-abacus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "backend/build/index.js",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "stop": "cd backend && npm stop",
+    "install": "cd shared && npm i && cd ../backend && npm i && cd ../frontend && npm i",
+    "build": "cd shared && npm run build && cd ../backend && npm run build && cd ../frontend && npm run build",
+    "fetch": "git fetch --all && git reset --hard origin/master",
+    "prod-omit": "npm i --omit=dev && npm run build && npm start",
+    "prod": "npm i && npm run build && npm start",
+    "deploy": "npm run fetch && npm run prod",
+    "backup": "rsync -a --delete backend/build/ backup",
+    "rollback": "rsync -a --delete backup/ backend/build && npm start",
+    "lint": "cd backend && npm run lint && cd ../frontend && npm run lint && cd ../shared && npm run lint"
+  },
+  "author": "",
+  "license": "MIT"
+}
