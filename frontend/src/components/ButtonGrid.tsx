@@ -71,14 +71,11 @@ const useStyles = createUseStyles({
     display: 'grid',
     gridTemplateColumns: '1fr 2fr 1fr',
     gridTemplateRows: '1fr',
-    gridGap: '0.5rem',
     width: '100%',
     height: '100%',
-    backgroundColor: '#222',
-    borderRadius: '0.2rem',
-    overflow: 'hidden',
-
+    
     '& span': {
+      backgroundColor: '#222',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -86,6 +83,16 @@ const useStyles = createUseStyles({
     
     '& button': {
       borderRadius: '0',
+      
+      '&:first-child': {
+        borderTopLeftRadius: '0.2rem',
+        borderBottomLeftRadius: '0.2rem',
+      },
+      
+      '&:last-child': {
+        borderTopRightRadius: '0.2rem',
+        borderBottomRightRadius: '0.2rem',
+      },
     },
   }
 });

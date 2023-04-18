@@ -25,14 +25,15 @@ const useStyles = createUseStyles({
     border: 'none',
     userSelect: 'none',
     
-    transition: 'transform 0.05s',
+    transition: 'transform 0.05s, filter 0.1s',
     
     '&:focus-visible': {
       backgroundColor: '#555',
     },
     
     '&:active': {
-      transform: 'translateY(2px)'
+      transform: 'translateY(2px)',
+      filter: 'brightness(0.95)',
     }
   }
 });
