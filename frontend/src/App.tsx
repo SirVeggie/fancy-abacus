@@ -7,10 +7,16 @@ export function App() {
   const styles = useStyles();
   const [count, setCount] = useState<number[]>([]);
 
+  const removeIndex = (i: number) => {
+    const newCount = [...count];
+    newCount.splice(i, 1);
+    setCount(newCount);
+  };
+  
   return (
     <div className={styles.app}>
       <div className={styles.appgrid}>
-        <Display list={count} clear={() => setCount([])} />
+        <Display list={count} clear={() => setCount([])} remove={removeIndex} />
         <ButtonGrid onClick={n => setCount([...count, n])} undo={() => setCount(count.slice(0, -1))} />
       </div>
     </div>

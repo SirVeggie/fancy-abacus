@@ -1,0 +1,15 @@
+{
+  "short_name": "Fancy Abacus",
+  "name": "Fancy Abacus",
+  "icons": [
+    {
+      "src": "abacus.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "fullscreen",
+  "theme_color": "#2C2F38",
+  "background_color": "#2C2F38"
+}
