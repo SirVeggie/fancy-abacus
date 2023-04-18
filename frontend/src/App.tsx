@@ -38,7 +38,7 @@ const useStyles = createUseStyles({
     height: '100%',
     maxWidth: '30rem',
     margin: '0 auto',
-    padding: '1rem 0',
+    padding: '1rem 0.5rem 0.5rem 0.5rem',
     boxSizing: 'border-box',
   }
 });
